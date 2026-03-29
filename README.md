@@ -1,4 +1,4 @@
-# 3-Blade Wind Turbine CFD (MRF)
+# N-Blade Wind Turbine CFD (MRF)
 
 ## Description
 This project simulates a 3-blade horizontal axis wind turbine using OpenFOAM with an MRF (Multiple Reference Frame) approach.
@@ -9,9 +9,8 @@ This project simulates a 3-blade horizontal axis wind turbine using OpenFOAM wit
 - Approach: Steady-state (MRF)
 
 ## Folder Structure
-- case/ → OpenFOAM case files (0, constant, system)
-- scripts/ → automation scripts for pitch/geometry
-- geometry/ → STL files (if included)
+- case/ → OpenFOAM case files (0, constant, system, scripts)
+- geometry/ → Base .STL files and SolidWorks files
 
 ## How to Run
 - *IN PROGRESS*
