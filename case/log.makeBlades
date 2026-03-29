@@ -1,0 +1,171 @@
+>>> surfaceTransformPoints -translate (-10 -10 -10) constant/triSurface/hub.stl constant/triSurface/hubO.stl
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceTransformPoints -translate (-10 -10 -10) constant/triSurface/hub.stl constant/triSurface/hubO.stl
+Date   : Mar 30 2026
+Time   : 03:38:32
+Host   : UDIT-RAO
+PID    : 7928
+I/O    : uncollated
+Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading surf from "constant/triSurface/hub.stl" ...
+Writing surf to "constant/triSurface/hubO.stl" ...
+Translating points by (-10 -10 -10)
+End
+
+>>> surfaceTransformPoints -translate (-0.5 0 -10) constant/triSurface/blade.stl constant/triSurface/bladeO.stl
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceTransformPoints -translate (-0.5 0 -10) constant/triSurface/blade.stl constant/triSurface/bladeO.stl
+Date   : Mar 30 2026
+Time   : 03:38:32
+Host   : UDIT-RAO
+PID    : 7929
+I/O    : uncollated
+Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading surf from "constant/triSurface/blade.stl" ...
+Writing surf to "constant/triSurface/bladeO.stl" ...
+Translating points by (-0.5 0 -10)
+End
+
+>>> surfaceTransformPoints -translate (0 5 0) constant/triSurface/bladeO.stl constant/triSurface/1bladeO.stl
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceTransformPoints -translate (0 5 0) constant/triSurface/bladeO.stl constant/triSurface/1bladeO.stl
+Date   : Mar 30 2026
+Time   : 03:38:32
+Host   : UDIT-RAO
+PID    : 7930
+I/O    : uncollated
+Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading surf from "constant/triSurface/bladeO.stl" ...
+Writing surf to "constant/triSurface/1bladeO.stl" ...
+Translating points by (0 5 0)
+End
+
+>>> surfaceTransformPoints -rotate-y 45 constant/triSurface/1bladeO.stl constant/triSurface/1bladeOP.stl
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceTransformPoints -rotate-y 45 constant/triSurface/1bladeO.stl constant/triSurface/1bladeOP.stl
+Date   : Mar 30 2026
+Time   : 03:38:32
+Host   : UDIT-RAO
+PID    : 7931
+I/O    : uncollated
+Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading surf from "constant/triSurface/1bladeO.stl" ...
+Writing surf to "constant/triSurface/1bladeOP.stl" ...
+Rotating points about y-axis: 45
+Rotating points by (0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107)
+End
+
+>>> surfaceTransformPoints -rotate-x 120 constant/triSurface/1bladeOP.stl constant/triSurface/2bladeOP.stl
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceTransformPoints -rotate-x 120 constant/triSurface/1bladeOP.stl constant/triSurface/2bladeOP.stl
+Date   : Mar 30 2026
+Time   : 03:38:32
+Host   : UDIT-RAO
+PID    : 7933
+I/O    : uncollated
+Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading surf from "constant/triSurface/1bladeOP.stl" ...
+Writing surf to "constant/triSurface/2bladeOP.stl" ...
+Rotating points about x-axis: 120
+Rotating points by (1 0 0 0 -0.5 -0.866025 0 0.866025 -0.5)
+End
+
+>>> surfaceTransformPoints -rotate-x 240 constant/triSurface/1bladeOP.stl constant/triSurface/3bladeOP.stl
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceTransformPoints -rotate-x 240 constant/triSurface/1bladeOP.stl constant/triSurface/3bladeOP.stl
+Date   : Mar 30 2026
+Time   : 03:38:32
+Host   : UDIT-RAO
+PID    : 7935
+I/O    : uncollated
+Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading surf from "constant/triSurface/1bladeOP.stl" ...
+Writing surf to "constant/triSurface/3bladeOP.stl" ...
+Rotating points about x-axis: 240
+Rotating points by (1 0 0 0 -0.5 0.866025 0 -0.866025 -0.5)
+End
+
