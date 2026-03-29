@@ -1,8 +1,5 @@
+case/constant/polyMesh/
+*.log
 processor*
 postProcessing/
-*.log
-*.vtk
-*.obj
-*.stl
-constant/polyMesh/
 [0-9]*/
