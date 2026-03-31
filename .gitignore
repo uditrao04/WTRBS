@@ -11,7 +11,7 @@ case/postProcessing/
 case/[0-9]*/
 
 # Extra generated STL files
-case/constant/triSurface/1blade0.stl
+case/constant/triSurface/1bladeO.stl
 case/constant/triSurface/1bladeOP.stl
 case/constant/triSurface/2bladeOP.stl
 case/constant/triSurface/3bladeOP.stl
@@ -19,3 +19,4 @@ case/constant/triSurface/bladeO.stl
 case/constant/triSurface/hubO.stl
 case/constant/triSurface/rotorRemesh.stl
 case/constant/triSurface/rotorUnion.stl
+case/constant/triSurface/unionRotor.scad
