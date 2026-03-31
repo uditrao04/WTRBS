@@ -10,9 +10,9 @@ Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
 Arch   : "LSB;label=32;scalar=64"
 Exec   : surfaceTransformPoints -translate (-10 -10 -10) constant/triSurface/hub.stl constant/triSurface/hubO.stl
 Date   : Mar 30 2026
-Time   : 03:38:32
+Time   : 19:25:59
 Host   : UDIT-RAO
-PID    : 7928
+PID    : 2439
 I/O    : uncollated
 Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
 nProcs : 1
@@ -38,9 +38,9 @@ Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
 Arch   : "LSB;label=32;scalar=64"
 Exec   : surfaceTransformPoints -translate (-0.5 0 -10) constant/triSurface/blade.stl constant/triSurface/bladeO.stl
 Date   : Mar 30 2026
-Time   : 03:38:32
+Time   : 19:25:59
 Host   : UDIT-RAO
-PID    : 7929
+PID    : 2440
 I/O    : uncollated
 Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
 nProcs : 1
@@ -66,9 +66,9 @@ Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
 Arch   : "LSB;label=32;scalar=64"
 Exec   : surfaceTransformPoints -translate (0 5 0) constant/triSurface/bladeO.stl constant/triSurface/1bladeO.stl
 Date   : Mar 30 2026
-Time   : 03:38:32
+Time   : 19:25:59
 Host   : UDIT-RAO
-PID    : 7930
+PID    : 2441
 I/O    : uncollated
 Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
 nProcs : 1
@@ -94,9 +94,9 @@ Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
 Arch   : "LSB;label=32;scalar=64"
 Exec   : surfaceTransformPoints -rotate-y 45 constant/triSurface/1bladeO.stl constant/triSurface/1bladeOP.stl
 Date   : Mar 30 2026
-Time   : 03:38:32
+Time   : 19:25:59
 Host   : UDIT-RAO
-PID    : 7931
+PID    : 2442
 I/O    : uncollated
 Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
 nProcs : 1
@@ -123,9 +123,9 @@ Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
 Arch   : "LSB;label=32;scalar=64"
 Exec   : surfaceTransformPoints -rotate-x 120 constant/triSurface/1bladeOP.stl constant/triSurface/2bladeOP.stl
 Date   : Mar 30 2026
-Time   : 03:38:32
+Time   : 19:25:59
 Host   : UDIT-RAO
-PID    : 7933
+PID    : 2444
 I/O    : uncollated
 Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
 nProcs : 1
@@ -152,9 +152,9 @@ Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
 Arch   : "LSB;label=32;scalar=64"
 Exec   : surfaceTransformPoints -rotate-x 240 constant/triSurface/1bladeOP.stl constant/triSurface/3bladeOP.stl
 Date   : Mar 30 2026
-Time   : 03:38:32
+Time   : 19:25:59
 Host   : UDIT-RAO
-PID    : 7935
+PID    : 2446
 I/O    : uncollated
 Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
 nProcs : 1
@@ -167,5 +167,122 @@ Reading surf from "constant/triSurface/1bladeOP.stl" ...
 Writing surf to "constant/triSurface/3bladeOP.stl" ...
 Rotating points about x-axis: 240
 Rotating points by (1 0 0 0 -0.5 0.866025 0 -0.866025 -0.5)
+End
+
+>>> openscad -o constant/triSurface/rotorUnion.stl constant/triSurface/unionRotor.scad
+Geometries in cache: 4
+Geometry cache size in bytes: 19328
+CGAL Polyhedrons in cache: 1
+CGAL cache size in bytes: 319984
+Total rendering time: 0:00:00.132
+   Top level object is a 3D object:
+   Simple:        yes
+   Vertices:      234
+   Halfedges:     714
+   Edges:         357
+   Halffacets:    250
+   Facets:        125
+   Volumes:         2
+>>> blender -b --python constant/triSurface/remesh_rotor.py -- constant/triSurface/rotorUnion.stl constant/triSurface/rotorRemesh.stl 0.5
+INFILE = /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case/constant/triSurface/rotorUnion.stl
+OUTFILE = /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case/constant/triSurface/rotorRemesh.stl
+VOXEL = 0.5
+Imported with bpy.ops.wm.stl_import
+Voxel remesh applied
+Triangulate applied
+wm.stl_export failed: Calling operator "bpy.ops.wm.stl_export" error, could not be found
+Exported with bpy.ops.export_mesh.stl
+DONE: /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case/constant/triSurface/rotorRemesh.stl
+Blender 4.0.2
+Timer 'STL Import' took 7.3 ms
+
+Blender quit
+>>> surfaceCheck constant/triSurface/rotorRemesh.stl
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceCheck constant/triSurface/rotorRemesh.stl
+Date   : Mar 30 2026
+Time   : 19:26:03
+Host   : UDIT-RAO
+PID    : 2516
+I/O    : uncollated
+Case   : /mnt/c/OpenFOAM/WindTurbineRectangleBladesSample/case
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading surface from "constant/triSurface/rotorRemesh.stl" ...
+
+Statistics:
+Triangles    : 89748 in 1 region(s)
+Vertices     : 44876
+Bounding Box : (-10 -33.5861 -51.0478) (10 55 51.0478)
+
+Index	Region	Size
+-----	------	----
+0	patch0	89748
+
+
+Surface has no illegal triangles.
+
+Triangle quality (equilateral=1, collapsed=0):
+    0 .. 0.05  : 0.00336498
+    0.05 .. 0.1  : 0.000133708
+    0.1 .. 0.15  : 0.000155992
+    0.15 .. 0.2  : 0.000155992
+    0.2 .. 0.25  : 0.000334269
+    0.25 .. 0.3  : 0.000401123
+    0.3 .. 0.35  : 0.000267415
+    0.35 .. 0.4  : 0.000445692
+    0.4 .. 0.45  : 0.0005794
+    0.45 .. 0.5  : 0.000423408
+    0.5 .. 0.55  : 0.00118108
+    0.55 .. 0.6  : 0.000846816
+    0.6 .. 0.65  : 0.0165575
+    0.65 .. 0.7  : 0.0290146
+    0.7 .. 0.75  : 0.347841
+    0.75 .. 0.8  : 0.142934
+    0.8 .. 0.85  : 0.0729153
+    0.85 .. 0.9  : 0.0965481
+    0.9 .. 0.95  : 0.126053
+    0.95 .. 1  : 0.159848
+
+    min 2.61468e-06 for triangle 20893
+    max 0.999976 for triangle 3493
+
+Edges:
+    min 1.063e-06 for edge 39435 points (-10 -5.31504e-07 -10)(-10 5.31499e-07 -10)
+    max 0.729467 for edge 167 points (-9.75 -9.72894 -0.75)(-9.25 -9.90817 -1.25)
+
+Checking for points less than 1e-6 of bounding box ((20 88.5861 102.096) metre) apart.
+    small edge between points 13134 (-0.25 -10 7.97249e-07) and 13133 (-0.25 -10 -7.97257e-07) distance:1.59451e-06
+    small edge between points 32436 (3.25 -10 7.97249e-07) and 25269 (3.25 -10 -7.97257e-07) distance:1.59451e-06
+    small edge between points 22035 (-3.75 10 7.97249e-07) and 18219 (-3.75 10 -7.97257e-07) distance:1.59451e-06
+    small edge between points 32446 (3.75 -10 7.97249e-07) and 28043 (3.75 -10 -7.97257e-07) distance:1.59451e-06
+    small edge between points 9274 (-4.25 -10 7.97249e-07) and 6948 (-4.25 -10 -7.97257e-07) distance:1.59451e-06
+    small edge between points 21777 (-4.25 10 7.97249e-07) and 15669 (-4.25 10 -7.97257e-07) distance:1.59451e-06
+    small edge between points 35975 (4.25 -10 7.97249e-07) and 28053 (4.25 -10 -7.97257e-07) distance:1.59451e-06
+    small edge between points 21767 (-4.75 10 7.97249e-07) and 15655 (-4.75 10 -7.97257e-07) distance:1.59451e-06
+    small edge between points 35985 (4.75 -10 7.97249e-07) and 28063 (4.75 -10 -7.97257e-07) distance:1.59451e-06
+    small edge between points 21757 (-5.25 10 7.97249e-07) and 15643 (-5.25 10 -7.97257e-07) distance:1.59451e-06
+Suppressing further warning messages. Use -outputThreshold to increase number of warnings.
+Found 20 nearby points.
+
+Surface is closed. All edges connected to two faces.
+
+Number of unconnected parts : 1
+
+Number of zones (connected area with consistent normal) : 1
+
+
 End
 

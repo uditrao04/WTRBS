@@ -17,14 +17,15 @@ FoamFile
 
 MRF1
 {
-    cellZone    all;
-    active      yes;
+    cellZone            rotatingZone;
+    active              yes;
 
-    nonRotatingPatches (outerWall);
+    nonRotatingPatches  ();
 
-    origin    (0 0 0);
-    axis      (0 0 1);
-    omega     100;
+    origin              (0 0 0);
+    axis                (1 0 0);
+
+    omega               50;
 }
 
 // ************************************************************************* //

@@ -14,7 +14,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-scale 0.001;		// Units: mm
+scale 1;		// Units: mm
 
 //Domain is kept intentionally small to reduce computational time
 vertices

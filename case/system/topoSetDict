@@ -1,0 +1,37 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  Field         | OpenFOAM: topoSet                               |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+
+// ************************************************************************* //
+
+actions
+(
+    {
+        name    rotatingCells;
+        type    cellSet;
+        action  new;
+        source  cylinderToCell;
+        p1      (-10 0 0);
+        p2      (60 0 0);
+        radius  60;
+    }
+
+    {
+        name    rotatingZone;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        set     rotatingCells;
+    }
+);
+
+// ************************************************************************* //
