@@ -8,7 +8,7 @@ log*
 case/constant/polyMesh/
 case/processor*/
 case/postProcessing/
-case/[0-9]*/
+case/[1-9]*/
 
 # Extra generated STL files
 case/constant/triSurface/1bladeO.stl
@@ -20,3 +20,5 @@ case/constant/triSurface/hubO.stl
 case/constant/triSurface/rotorRemesh.stl
 case/constant/triSurface/rotorUnion.stl
 case/constant/triSurface/unionRotor.scad
+case/constant/triSurface/remesh_rotor.py
+case/cell_97658.obj
