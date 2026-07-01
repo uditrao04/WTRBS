@@ -3,6 +3,7 @@ case/log
 case/log.*
 *.log
 log*
+*.obj
 
 # OpenFOAM generated files
 case/constant/polyMesh/
