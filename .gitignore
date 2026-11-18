@@ -1,25 +1,50 @@
-# Logs
-case/log
-case/log.*
+
+# ==========================================
+# OpenFOAM - Solver logs
+# ==========================================
+**/log
+**/log.*
+**/log*
 *.log
-log*
+
+# ==========================================
+# Generated geometry and mesh files
+# ==========================================
 *.obj
+**/constant/polyMesh/
 
-# OpenFOAM generated files
-case/constant/polyMesh/
-case/processor*/
-case/postProcessing/
-case/[1-9]*/
+# ==========================================
+# Parallel processing
+# ==========================================
+**/processor*/
 
-# Extra generated STL files
-case/constant/triSurface/1bladeO.stl
-case/constant/triSurface/1bladeOP.stl
-case/constant/triSurface/2bladeOP.stl
-case/constant/triSurface/3bladeOP.stl
-case/constant/triSurface/bladeO.stl
-case/constant/triSurface/hubO.stl
-case/constant/triSurface/rotorRemesh.stl
-case/constant/triSurface/rotorUnion.stl
-case/constant/triSurface/unionRotor.scad
-case/constant/triSurface/remesh_rotor.py
-case/cell_97658.obj
+# ==========================================
+# Post-processing output
+# ==========================================
+**/postProcessing/
+
+# ==========================================
+# Simulation time directories
+# Ignore nonzero numerical time directories
+# Preserve initial condition directory 0/
+# ==========================================
+**/[1-9]*/
+
+# ==========================================
+# Generated STL and auxiliary geometry
+# ==========================================
+**/constant/triSurface/1bladeO.stl
+**/constant/triSurface/1bladeOP.stl
+**/constant/triSurface/2bladeOP.stl
+**/constant/triSurface/3bladeOP.stl
+**/constant/triSurface/bladeO.stl
+**/constant/triSurface/hubO.stl
+**/constant/triSurface/rotorRemesh.stl
+**/constant/triSurface/rotorUnion.stl
+**/constant/triSurface/unionRotor.scad
+**/constant/triSurface/remesh_rotor.py
+
+# ==========================================
+# Generated auxiliary files
+# ==========================================
+**/cell_97658.obj
